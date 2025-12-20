@@ -1,0 +1,112 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#undef ZMK_BEHAVIORS_KEEP_ALL
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define NAV_L 1
+#define OTHER_L 2
+#define NUM_L 3
+#define SYM_L 4
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+
+&lt { quick-tap-ms = <200>; };
+
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        layer_and_press: layer_and_press {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_AND_PRESS";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
+
+        bracket_dance_open: bracket_dance_open {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_DANCE_OPEN";
+            #binding-cells = <0>;
+            bindings =
+                <&hm LESS_THAN LEFT_PARENTHESIS>,
+                <&hm LEFT_BRACKET LEFT_BRACE>;
+        };
+
+        bracket_dance_close: bracket_dance_close {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_DANCE_CLOSE";
+            #binding-cells = <0>;
+            bindings =
+                <&hm GREATER_THAN RIGHT_PARENTHESIS>,
+                <&hm RIGHT_BRACKET RIGHT_BRACE>;
+        };
+
+        pluss_sporsmal: pluss_sporsmal {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLUSS_SPORSMAL";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp QUESTION>;
+        };
+
+        quote_stjerne: quote_stjerne {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOTE_STJERNE";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp ASTERISK>;
+        };
+
+        and_or: and_or {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AND_OR";
+            #binding-cells = <0>;
+            bindings = <&kp AMPERSAND>, <&kp PIPE>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y                 &kp U        &kp I        &kp O       &kp P
+&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &lt 1 G        &layer_and_press 1 H  &hm RSHFT J  &hm RCTRL K  &hm LALT L  &hm (LGUI) RA(L)
+&kp Z       &kp X       &kp C        &kp V        &kp B          &kp N                 &kp M        &kp RA(W)    &kp RA(Z)   &kp TAB
+                                     &kp ESCAPE   &lt 2 SPACE    &kp SPACE             &kp ENTER
+            >;
+        };
+
+        symbols_layer {
+            bindings = <
+&trans  &quote_stjerne     &kp SLASH            &and_or               &pluss_sporsmal    &trans     &kp N7                   &kp N8        &kp N9        &trans
+&trans  &kp DOUBLE_QUOTES  &bracket_dance_open  &bracket_dance_close  &kp EXCLAMATION    &trans     &mt LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
+&trans  &kp HASH           &kp DOLLAR           &kp TILDE             &kp AT_SIGN        &trans     &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &trans
+                                                &kp PERIOD            &kp COMMA          &kp SPACE  &kp N0
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans     &trans
+&trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans     &trans
+                        &trans  &trans    &trans          &trans
+            >;
+        };
+    };
+};
