@@ -96,10 +96,10 @@
 
         symbols_layer {
             bindings = <
-&none  &quote_stjerne        &kp NB_SLASH         &and_or               &pluss_sporsmal       &none      &kp N7                   &kp N8        &kp N9        &none
-&none  &kp NB_DOUBLE_QUOTES  &bracket_dance_open  &bracket_dance_close  &kp NB_EXCLAMATION    &none      &mt LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp NB_EQUAL
-&none  &kp NB_HASH           &kp NB_DOLLAR        &kp NB_TILDE          &kp SINGLE_QUOTE      &none      &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &none
-                                                  &kp NB_PERIOD         &kp NB_COMMA          &kp MINUS  &kp N0
+&kp MINUS        &quote_stjerne        &kp NB_SLASH         &and_or               &pluss_sporsmal       &none         &kp N7                   &kp N8        &kp N9        &none
+&kp KP_MINUS     &kp NB_DOUBLE_QUOTES  &bracket_dance_open  &bracket_dance_close  &kp NB_EXCLAMATION    &none         &mt LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp NB_EQUAL
+&kp KP_SUBTRACT  &kp NB_HASH           &kp NB_DOLLAR        &kp NB_TILDE          &kp SINGLE_QUOTE      &none         &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &none
+                                                            &kp NB_PERIOD         &kp NB_COMMA          &kp NB_MINUS  &kp N0
             >;
         };
 
