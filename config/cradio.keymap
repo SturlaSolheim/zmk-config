@@ -45,8 +45,8 @@
             label = "BRACKET_DANCE_OPEN";
             #binding-cells = <0>;
             bindings =
-                <&hm LESS_THAN LEFT_PARENTHESIS>,
-                <&hm LEFT_BRACKET LEFT_BRACE>;
+                <&hm NB_LESS_THAN NB_LEFT_PARENTHESIS>,
+                <&hm NB_LEFT_BRACKET NB_LEFT_BRACE>;
         };
 
         bracket_dance_close: bracket_dance_close {
@@ -54,29 +54,29 @@
             label = "BRACKET_DANCE_CLOSE";
             #binding-cells = <0>;
             bindings =
-                <&hm GREATER_THAN RIGHT_PARENTHESIS>,
-                <&hm RIGHT_BRACKET RIGHT_BRACE>;
+                <&hm NB_GREATER_THAN NB_RIGHT_PARENTHESIS>,
+                <&hm NB_RIGHT_BRACKET NB_RIGHT_BRACE>;
         };
 
         pluss_sporsmal: pluss_sporsmal {
             compatible = "zmk,behavior-tap-dance";
             label = "PLUSS_SPORSMAL";
             #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp QUESTION>;
+            bindings = <&kp NB_PLUS>, <&kp NB_QUESTION>;
         };
 
         quote_stjerne: quote_stjerne {
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE_STJERNE";
             #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp ASTERISK>;
+            bindings = <&kp NB_SINGLE_QUOTE>, <&kp NB_ASTERISK>;
         };
 
         and_or: and_or {
             compatible = "zmk,behavior-tap-dance";
             label = "AND_OR";
             #binding-cells = <0>;
-            bindings = <&kp AMPERSAND>, <&kp PIPE>;
+            bindings = <&kp NB_AMPERSAND>, <&kp NB_PIPE>;
         };
     };
 
@@ -94,10 +94,10 @@
 
         symbols_layer {
             bindings = <
-&trans  &quote_stjerne     &kp SLASH            &and_or               &pluss_sporsmal    &trans     &kp N7                   &kp N8        &kp N9        &trans
-&trans  &kp DOUBLE_QUOTES  &bracket_dance_open  &bracket_dance_close  &kp EXCLAMATION    &none      &mt LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
-&trans  &kp HASH           &kp DOLLAR           &kp TILDE             &kp AT_SIGN        &trans     &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &trans
-                                                &kp PERIOD            &kp COMMA          &kp SPACE  &kp N0
+&trans  &quote_stjerne        &kp NB_SLASH            &and_or               &pluss_sporsmal       &trans     &kp N7                   &kp N8        &kp N9        &trans
+&trans  &kp NB_DOUBLE_QUOTES  &bracket_dance_open     &bracket_dance_close  &kp NB_EXCLAMATION    &none      &mt LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp NB_EQUAL
+&trans  &kp NB_HASH           &kp NB_DOLLAR           &kp NB_TILDE          &kp NB_AT_SIGN        &trans     &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &trans
+                                                      &kp NB_PERIOD         &kp NB_COMMA          &kp SPACE  &kp N0
             >;
         };
 
