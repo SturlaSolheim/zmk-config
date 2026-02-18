@@ -49,7 +49,7 @@
             #binding-cells = <0>;
             bindings =
                 <&hm NB_LESS_THAN NB_LEFT_PARENTHESIS>,
-                <&hm NB_LEFT_BRACKET LEFT_BRACE>;
+                <&hm NB_LEFT_BRACKET LS(NB_LEFT_BRACKET)>;
         };
 
         bracket_dance_close: bracket_dance_close {
