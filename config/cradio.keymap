@@ -115,7 +115,7 @@
 &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y                 &kp U        &kp I          &kp O       &kp P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &lt 1 G            &layer_and_press 1 H  &hm RSHFT J  &hm RCTRL K    &hm LALT L  &hm LGUI NB_O_SLASH
 &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N                 &kp M        &kp NB_A_RING  &kp NB_AE   &kp TAB
-                                     &kp ESCAPE   &lt 2 BACKSPACE    &kp SPACE             &kp ENTER
+                                     &lt 3 ESC    &lt 2 BACKSPACE    &kp SPACE             &kp ENTER
             >;
         };
 
@@ -147,12 +147,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        f-taster {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
