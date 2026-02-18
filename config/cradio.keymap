@@ -49,7 +49,7 @@
             #binding-cells = <0>;
             bindings =
                 <&hm NB_LESS_THAN NB_LEFT_PARENTHESIS>,
-                <&hm NB_LEFT_BRACKET NB_LEFT_BRACE>;
+                <&hm NB_LEFT_BRACKET LEFT_BRACE>;
         };
 
         bracket_dance_close: bracket_dance_close {
@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "AND_OR";
             #binding-cells = <0>;
-            bindings = <&kp NB_AMPERSAND>, <&kp PIPE>;
+            bindings = <&kp NB_AMPERSAND>, <&kp NB_LEFT_BRACE>;
         };
     };
 
