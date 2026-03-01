@@ -48,7 +48,7 @@
             label = "BRACKET_DANCE_OPEN";
             #binding-cells = <0>;
             bindings =
-                <&hm NB_LESS_THAN NB_LEFT_PARENTHESIS>,
+                <&hm LESS_THAN NB_LEFT_PARENTHESIS>,
                 <&hm NB_LEFT_BRACKET LS(NB_LEFT_BRACKET)>;
         };
 
@@ -57,8 +57,8 @@
             label = "BRACKET_DANCE_CLOSE";
             #binding-cells = <0>;
             bindings =
-                <&hm NB_GREATER_THAN NB_RIGHT_PARENTHESIS>,
-                <&hm NB_RIGHT_BRACKET NB_RIGHT_BRACE>;
+                <&hm GREATER_THAN NB_RIGHT_PARENTHESIS>,
+                <&hm NB_RIGHT_BRACKET LS(LA(N9))>;
         };
 
         pluss_sporsmal: pluss_sporsmal {
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE_STJERNE";
             #binding-cells = <0>;
-            bindings = <&kp NB_PIPE>, <&kp NB_ASTERISK>;
+            bindings = <&kp NB_SINGLE_QUOTE>, <&kp NB_ASTERISK>;
         };
 
         and_or: and_or {
@@ -123,7 +123,7 @@
             bindings = <
 &none           &quote_stjerne        &kp NB_SLASH         &and_or               &pluss_sporsmal        &none         &kp N7                   &kp N8        &kp N9        &none
 &kp NB_PERCENT  &kp NB_DOUBLE_QUOTES  &bracket_dance_open  &bracket_dance_close  &kp NB_EXCLAMATION     &none         &mt LEFT_SHIFT NUMBER_4  &kp N5        &kp NUMBER_6  &kp NB_EQUAL
-&none           &kp NB_HASH           &kp NB_DOLLAR        &kp NB_TILDE          &kp NB_SINGLE_QUOTE    &none         &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &none
+&none           &kp NB_HASH           &kp LS(N4)           &kp NB_TILDE          &kp NB_SINGLE_QUOTE    &none         &kp NUMBER_1             &kp NUMBER_2  &kp NUMBER_3  &none
                                                            &kp NB_PERIOD         &kp NB_COMMA           &kp NB_MINUS  &kp N0
             >;
         };
