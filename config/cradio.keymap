@@ -48,7 +48,7 @@
             label = "BRACKET_DANCE_OPEN";
             #binding-cells = <0>;
             bindings =
-                <&hm NB_LT NB_LEFT_PARENTHESIS>,
+                <&hm LT NB_LEFT_PARENTHESIS>,
                 <&hm NB_LEFT_BRACKET LS(NB_LEFT_BRACKET)>;
         };
 
@@ -57,7 +57,7 @@
             label = "BRACKET_DANCE_CLOSE";
             #binding-cells = <0>;
             bindings =
-                <&hm NB_GT NB_RIGHT_PARENTHESIS>,
+                <&hm GT NB_RIGHT_PARENTHESIS>,
                 <&hm NB_RIGHT_BRACKET LS(LA(N9))>;
         };
 
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE_STJERNE";
             #binding-cells = <0>;
-            bindings = <&kp NB_APOSTROPHE>, <&kp NB_ASTERISK>;
+            bindings = <&kp NB_LT>, <&kp NB_ASTERISK>;
         };
 
         and_or: and_or {
