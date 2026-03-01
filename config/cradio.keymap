@@ -48,7 +48,7 @@
             label = "BRACKET_DANCE_OPEN";
             #binding-cells = <0>;
             bindings =
-                <&hm LT NB_LEFT_PARENTHESIS>,
+                <&hm LESS_THAN NB_LEFT_PARENTHESIS>,
                 <&hm NB_LEFT_BRACKET LS(NB_LEFT_BRACKET)>;
         };
 
@@ -57,7 +57,7 @@
             label = "BRACKET_DANCE_CLOSE";
             #binding-cells = <0>;
             bindings =
-                <&hm GT NB_RIGHT_PARENTHESIS>,
+                <&hm GREATER_THAN NB_RIGHT_PARENTHESIS>,
                 <&hm NB_RIGHT_BRACKET LS(LA(N9))>;
         };
 
