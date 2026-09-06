@@ -110,6 +110,11 @@
             bindings = <&tog 4>;
             key-positions = <9 29 0 20>;
         };
+
+        studio_unlock {
+            bindings = <&studio_unlock>;
+            key-positions = <20 24 25 29>;
+        };
     };
 
     keymap {
