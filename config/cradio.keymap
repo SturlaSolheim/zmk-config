@@ -8,6 +8,7 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 3000  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
+#include <input/processors.dtsi>
 #include <locale/keys_nb.h>
 #include "keys_nb.h"
 #include <behaviors.dtsi>
@@ -23,6 +24,11 @@
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 
 &lt { quick-tap-ms = <200>; };
+
+&mmv_listener {
+    input-processors = <&zip_xy_scaler 1 3>; // Multiplier 1, Divisor 3 (~33% of normal speed)
+    layers = <8>;                             // The index of your "slow" layer
+};
 
 / {
     behaviors {
