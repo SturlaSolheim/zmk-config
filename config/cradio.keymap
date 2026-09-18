@@ -6,7 +6,7 @@
 
 #define ZMK_BEHAVIORS_KEEP_ALL
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 3000  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <input/processors.dtsi>
 #include <locale/keys_nb.h>
@@ -25,9 +25,12 @@
 
 &lt { quick-tap-ms = <200>; };
 
+/* FIXED: Correct syntax for layer-specific overrides via nested child nodes */
 &mmv_input_listener {
-    input-processors = <&zip_xy_scaler 1 4>; // Multiplier 1, Divisor 3 (~33% of normal speed)
-    layers = <8>;                             // The index of your "slow" layer
+    slow_move {
+        layers = <8>;                             
+        input-processors = <&zip_xy_scaler 1 4>; // Multiplier 1, Divisor 3 (~33% speed)
+    };
 };
 
 / {
