@@ -115,6 +115,11 @@
             bindings = <&studio_unlock>;
             key-positions = <20 24 25 29>;
         };
+
+        vinduvelger {
+            bindings = <&sl 6>;
+            key-positions = <1 2>;
+        };
     };
 
     keymap {
@@ -171,6 +176,15 @@
 &trans  &kp N1  &kp NUMBER_4  &kp NUMBER_3  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
                               &kp ESC       &trans    &trans  &trans
+            >;
+        };
+
+        vinduvelger {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans                &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &kp LA(LG(NUMBER_4))  &trans                &trans                &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &kp LA(LG(N1))        &kp LA(LG(NUMBER_2))  &kp LA(LG(NUMBER_3))  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
