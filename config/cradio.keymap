@@ -6,6 +6,7 @@
 
 #define ZMK_BEHAVIORS_KEEP_ALL
 
+#include <dt-bindings/zmk/pointing.h>
 #include <locale/keys_nb.h>
 #include "keys_nb.h"
 #include <behaviors.dtsi>
