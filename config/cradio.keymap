@@ -5,6 +5,8 @@
  */
 
 #define ZMK_BEHAVIORS_KEEP_ALL
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <locale/keys_nb.h>
 #include "keys_nb.h"
