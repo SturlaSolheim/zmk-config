@@ -33,7 +33,7 @@
         layers = <8>;
         input-processors = <&zip_xy_scaler 1 4>; // Multiplier 1, Divisor 3 (~33% speed)
     };
-    slow_move {
+    slow_move2 {
         layers = <9>;
         input-processors = <&zip_xy_scaler 1 6>; // Multiplier 1, Divisor 3 (~33% speed)
     };
