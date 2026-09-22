@@ -137,7 +137,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTES";
             #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+            bindings = <&kp NB_DOUBLE_QUOTES>, <&kp NB_SINGLE_QUOTE>;
         };
     };
 
