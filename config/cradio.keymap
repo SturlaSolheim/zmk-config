@@ -33,6 +33,10 @@
         layers = <8>;
         input-processors = <&zip_xy_scaler 1 4>; // Multiplier 1, Divisor 3 (~33% speed)
     };
+    slow_move {
+        layers = <9>;
+        input-processors = <&zip_xy_scaler 1 6>; // Multiplier 1, Divisor 3 (~33% speed)
+    };
 };
 
 &mmv {
@@ -241,6 +245,15 @@
         };
 
         saktemus {
+            bindings = <
+&trans  &mo 9  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        saktemus2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
