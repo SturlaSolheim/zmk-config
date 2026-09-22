@@ -28,10 +28,21 @@
 /* FIXED: Correct syntax for layer-specific overrides via nested child nodes */
 
 &mmv_input_listener {
+
     slow_move {
         layers = <8>;
         input-processors = <&zip_xy_scaler 1 4>; // Multiplier 1, Divisor 3 (~33% speed)
     };
+};
+
+&mmv {
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+};
+
+&msc {
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
 };
 
 / {
